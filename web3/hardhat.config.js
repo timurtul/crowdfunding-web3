@@ -19,8 +19,7 @@ module.exports = {
    hardhat: {},
    sepolia:{ 
     url: 'https://rpc.ankr.com/eth_sepolia',
-    account: [`0x${process.env.PRIVATE_KEY}`]
-   }
+    account: [`0x${process.env.PRIVATE_KEY}`]   }
   },
   paths: {
     artifacts: "./artifacts-zk",
