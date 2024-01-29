@@ -1,6 +1,10 @@
 require("@matterlabs/hardhat-zksync-solc");
 
 /** @type import('hardhat/config').HardhatUserConfig */
+
+/**
+ https://support.thirdweb.com/troubleshooting-errors/7Y1BqKNvtLdBv5fZkRZZB3/error-unauthorized---you-dont-have-permission-to-use-this-service/nE1AW4K5FNVrxza6iFDy9t
+ */
 module.exports = {
   zksolc: {
     version: "1.3.9",
@@ -13,9 +17,9 @@ module.exports = {
   },
   networks: {
    hardhat: {},
-   goerli:{ 
-    url: 'https://rpc.ankr.com/eth_goerli',
-    accounts: ['0x${process.env.PRIVATE_KEY}']
+   sepolia:{ 
+    url: 'https://rpc.ankr.com/eth_sepolia',
+    account: [`0x${process.env.PRIVATE_KEY}`]
    }
   },
   paths: {
@@ -26,7 +30,7 @@ module.exports = {
   },
   solidity: {
     version: "0.8.17",
-    defaultNetwork: 'goerli',
+    defaultNetwork: 'sepolia',
     settings: {
       optimizer: {
         enabled: true,
